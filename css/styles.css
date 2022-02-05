@@ -1381,7 +1381,9 @@ input[type='checkbox'] {
 	border: 0.125rem solid #fff;
 	color: #fff;
 }
-
+.submit{
+	padding-bottom: 1.2em;
+}
 
 /**************************/
 /*     15. Newsletter     */
