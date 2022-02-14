@@ -947,7 +947,7 @@ input[type='checkbox'] {
 /**************************/
 .basic-1 {
 	padding-top: 3.75rem;
-	padding-bottom: 3.5rem;
+	padding-bottom: 1.5rem;
 	background-color: #fbf9f5;
 }
 
@@ -965,8 +965,8 @@ input[type='checkbox'] {
 /*     08. Description     */
 /***************************/
 .basic-2 {
-	padding-top: 3.5rem;
-	padding-bottom: 2.75rem;
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
 	background-color: #fbf9f5;
 }
 
@@ -1227,8 +1227,8 @@ input[type='checkbox'] {
 /*     12. Takeaways     */
 /*************************/
 .cards {
-	padding-top: 3rem;
-	padding-bottom: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
 	background-color: #fbf9f5;
 }
 
@@ -1900,7 +1900,7 @@ a:hover.back-to-top {
 
 	/* Instructor */
 	.basic-1 {
-		padding-bottom: 4.5rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.basic-1 img {
@@ -1911,8 +1911,8 @@ a:hover.back-to-top {
 
 	/* Description */
 	.basic-2 {
-		padding-top: 4.5rem;
-		padding-bottom: 3.5rem
+		padding-top: 2rem;
+		padding-bottom: 1.5rem
 	}
 	/* end of description */
 
@@ -1958,8 +1958,8 @@ a:hover.back-to-top {
 
 	/* Takeaways */
 	.cards {
-		padding-top: 3.5rem;
-		padding-bottom: 3rem;
+		padding-top: 2rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.cards .card {
