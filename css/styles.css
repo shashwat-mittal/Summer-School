@@ -666,7 +666,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-	color: #ffbd50;
+	color: #333;
 }
 
 /* Dropdown Menu */
@@ -1810,7 +1810,7 @@ a:hover.back-to-top {
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #ffbd50;
+		color: #333;
 	}
 
 	.navbar-custom .dropdown-menu {
