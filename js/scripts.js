@@ -209,10 +209,16 @@
 		var email = $("#remail").val();
 		var phone = $("#rphone").val();
         var terms = $("#rterms").val();
+        var data = {
+            subject : "New SSBF Enquiry",
+            message : `Name = ${name}\n Email = ${email}\n `
+        }
         
         $.ajax({
             type: "POST",
-            url: "php/registrationform-process.php",
+            headers: { "Content-Type": "application/json" },
+            url: "https://infinite-hollows-02968.herokuapp.com/sendmail",
+            body : JSON.stringify(data),
             data: "name=" + name + "&email=" + email + "&phone=" + phone + "&terms=" + terms, 
             success: function(text) {
                 if (text == "success") {
@@ -314,26 +320,34 @@
         }
     });
 
-    function csubmitForm() {
+    async function csubmitForm() {
         // initiate variables with form content
 		var name = $("#cname").val();
 		var email = $("#cemail").val();
         var message = $("#cmessage").val();
         var terms = $("#cterms").val();
-        $.ajax({
-            type: "POST",
-            url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    cformSuccess();
-                } else {
-                    cformError();
-                    csubmitMSG(false, text);
-                }
-            }
+        var data = {
+          subject: "New SSBF Enquiry",
+          message: `Name = ${name}\n Email = ${email}\n Message = ${message}`,
+        };
+        await fetch(
+          "https://infinite-hollows-02968.herokuapp.com/sendmailSSBF",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          }
+        ).then(async (res) => {
+          if (res.status === 201) {
+            cformSuccess();
+          } else {
+            cformError();
+            csubmitMSG(false, res.text);
+          }
         });
-	}
+}
+
+	
 
     function cformSuccess() {
         $("#contactForm")[0].reset();
@@ -433,4 +447,4 @@
 		$(this).blur();
 	});
 
-})(jQuery);
+ })(jQuery);
